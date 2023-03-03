@@ -75,3 +75,27 @@ for (let i = 0; i < cities.length; i++) {
   })
 }
 console.log(cities);
+
+
+// 5
+const citydata = [
+  { name: "Bishkek", population: "1m" },
+  { name: "Karakol", population: "80k" },
+  { name: "Cholpon-Ata", population: "40k" }
+];
+
+const citydataTable = document.createElement('table');
+body.append(citydataTable);
+
+for (let i = 0; i < citydata.length; i++) {
+  const tr = document.createElement('tr');
+  citydataTable.append(tr);
+
+  const td = document.createElement('td');
+  tr.append(td);
+  td.textContent = citydata[i].name;
+
+  const tdd = document.createElement('td');
+  tr.append(tdd);
+  tdd.textContent = citydata[i].population;
+}
